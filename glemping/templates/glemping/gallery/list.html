@@ -1,0 +1,10 @@
+{% extends 'glemping/base.html' %}
+
+{% block title %}Gallery{% endblock title %}
+{% block content %}
+{% for picture in pictures %}
+<br>
+<img src="{{picture.image.url}}" width="50%">
+<br>
+{% endfor %}
+{% endblock content %}

@@ -55,3 +55,24 @@ class Activity(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Picture(models.Model):
+    STATUS_CHOICES = (
+        ('draft', 'Draft'),
+        ('published', 'Published')
+    )
+    title = models.CharField(max_length=100)
+    image = models.ImageField()
+
+    status = models.CharField(max_length=20,
+                              choices=STATUS_CHOICES, default='draft')
+    publish = models.DateTimeField(default=timezone.now)
+    objects = models.Manager()
+    published = PublishedManager()
+
+    class Meta:
+        ordering = ('-publish',)
+
+    def __str__(self):
+        return self.title

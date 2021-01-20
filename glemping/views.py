@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Post, Activity
+from .models import Post, Activity, Picture
 
 
 def homepage_view(request):
@@ -15,7 +15,7 @@ def post_list(request):
 
 def post_detail(request, post):
     post = get_object_or_404(Post, slug=post, status='published')
-    return render(request, 'glemping/news/detail.html', {'post': post})
+    return render(request, 'glemping/news/detail.html', {'post': post, 'section': 'news'})
 
 
 def activity_list(request):
@@ -24,3 +24,11 @@ def activity_list(request):
                   'glemping/activities/list.html',
                   {'activities': activities,
                    'section': 'activities'})
+
+
+def gallery_list(request):
+    pictures = Picture.published.all()
+    return render(request,
+                  'glemping/gallery/list.html',
+                  {'pictures': pictures,
+                   'section': 'gallery'})

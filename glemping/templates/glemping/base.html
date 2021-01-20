@@ -26,7 +26,8 @@
                 <a {% ifequal section 'activities' %} class="active" {% endifequal %}
                     href="{% url 'glemping:activity_list' %}">Activities</a>
                 <a href="#reserve">Book Now</a>
-                <a href="#gallery">Gallery</a>
+                <a {% ifequal section 'gallery' %} class="active" {% endifequal %}
+                    href="{% url 'glemping:gallery_list' %}">Gallery</a>
                 <a href="#reviews">Reviews</a>
                 <a href="#about us">About us</a>
             </div>
