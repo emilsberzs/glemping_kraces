@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link href="{% static 'css/glemping.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>Glamping "Kraces"</h1>
+                <p>Camping with style and comfort</p>
+            </div>
+        </div>
+        <div class="topnav">
+            <div class="navbar">
+                <a href="#home">Home</a>
+                <a {% ifequal section 'news' %} class="active" {% endifequal %}
+                    href="{% url 'glemping:post_list' %}">News</a>
+                <a href="#things-to-do">Things to do</a>
+                <a href="#reserve">Book Now</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#about us">About us</a>
+            </div>
+        </div>
+    </header>
+    <div id="content">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+</body>
+
+</html>
