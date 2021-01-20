@@ -1,0 +1,14 @@
+{% extends 'glemping/base.html' %}
+{% block title %}
+Activities
+{% endblock title %}
+
+{% block content %}
+<h1>Activities</h1>
+{% for activity in activities %}
+<h2>{{activity.title}}</h2>
+<br>
+<img src="{{activity.image.url}}" width="25%">
+<p>{{activity.description|truncatewords:30}}</p>
+{% endfor %}
+{% endblock content %}
