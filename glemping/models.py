@@ -33,3 +33,10 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('glemping:post_detail', args=[self.slug])
+
+
+class Activity(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+    image = models.ImageField(blank=True)
+    season = models.DurationField()

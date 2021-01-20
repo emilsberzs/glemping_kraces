@@ -2,6 +2,10 @@ from django.shortcuts import render, get_object_or_404
 from .models import Post
 
 
+def homepage_view(request):
+    return render(request, 'glemping/home.html', {'section': 'home'})
+
+
 def post_list(request):
     posts = Post.published.all()
     return render(request,

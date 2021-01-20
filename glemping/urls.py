@@ -4,6 +4,7 @@ from . import views
 app_name = 'glemping'
 
 urlpatterns = [
-    path('', views.post_list, name='post_list'),
-    path('<slug:post>/', views.post_detail, name='post_detail'),
+    path('', views.homepage_view, name='home'),
+    path('news/', views.post_list, name='post_list'),
+    path('news/<slug:post>/', views.post_detail, name='post_detail'),
 ]
