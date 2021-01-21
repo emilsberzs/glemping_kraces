@@ -5,10 +5,15 @@ Activities
 
 {% block content %}
 <h1>Activities</h1>
-{% for activity in activities %}
-<h2>{{activity.title}}</h2>
-<br>
-<img src="{{activity.image.url}}" width="25%">
-<p>{{activity.description|truncatewords:30}}</p>
-{% endfor %}
+<div class="activities">
+    {% for activity in activities %}
+    <div class="activity">
+        <h2>{{activity.title}}</h2>
+        <br>
+        <img src="{{activity.image.url}}" width="30%" class="grid-image">
+        <p>{{activity.description}}</p>
+    </div>
+    {% endfor %}
+</div>
+
 {% endblock content %}

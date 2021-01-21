@@ -2,9 +2,9 @@
 
 {% block title %}Gallery{% endblock title %}
 {% block content %}
-{% for picture in pictures %}
-<br>
-<img src="{{picture.image.url}}" width="50%">
-<br>
-{% endfor %}
+<div class="gallery">
+    {% for picture in pictures %}
+    <img src="{{picture.image.url}}" class="picture">
+    {% endfor %}
+</div>
 {% endblock content %}

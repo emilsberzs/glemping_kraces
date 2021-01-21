@@ -1,3 +1,18 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
 .hero-image {
     background-image: url(/static/hero-image.jpg);
     height: 50%;
@@ -10,9 +25,8 @@
   }
   
   .hero-text {
-    text-align: center;
-    font-size: x-large;
     
+    font-size: x-large;
     color:honeydew;
     position: absolute;
     font-weight: bold;
@@ -26,7 +40,13 @@
     padding: 20px;
     text-align: center;
     background-color: rgba(0,0,0, 0.5);
+
   }
+
+.hero-text.h1 {
+  font-size: xx-small;
+}
+
   .topnav {
     background-color: green;
     overflow: auto;
@@ -62,3 +82,49 @@
      align-items: center;
      text-align: center;
  }
+
+ footer {
+   width: 100%;
+   padding: 0.5rem;
+   background-color: green;
+   text-align: center;
+   font-size: x-large;
+
+ }
+
+ #content {
+   flex: 1 0 auto;
+   padding: 0.5rem;
+ }
+
+ .activities {
+   display: flex;
+   flex-wrap: wrap;
+ }
+
+.activity {
+  flex: 0 0 33%;
+  padding: 0;
+}
+
+.activity::before{
+  left: -20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url(/static/backround.png);
+}
+
+.picture {
+  flex:1 1 25%;
+  width: 25%;
+  align-self: center;
+  margin: 5px;
+  border: 2px solid black;
+  max-width: 33.3%;
+  
+}
+
+
