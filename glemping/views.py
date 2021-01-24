@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Post, Activity, Picture
+from .models import Post, Activity, Picture, Review
+from .forms import ReviewForm
 
 
 def homepage_view(request):
@@ -32,3 +33,7 @@ def gallery_list(request):
                   'glemping/gallery/list.html',
                   {'pictures': pictures,
                    'section': 'gallery'})
+
+
+def review_view(request):
+    pass
