@@ -36,4 +36,10 @@ def gallery_list(request):
 
 
 def review_view(request):
-    pass
+    reviews = Review.objects.all()
+    review_form = ReviewForm()
+    return render(request,
+                  'glemping/reviews/review.html',
+                  {'reviews': reviews,
+                   'review_form': review_form,
+                   'section': 'reviews'})

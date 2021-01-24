@@ -1,0 +1,17 @@
+{% extends 'glemping/base.html' %}
+
+{% block title %}Reviews{% endblock title %}
+
+{% block content %}
+{% for review in reviews %}
+<h2>{{review.name}}</h2>
+<p>{{review.body}}</p>
+{% endfor %}
+<h1>Add a review</h1>
+<form method="post">
+    {{review_form.as_p}}
+    {% csrf_token %}
+    <p><input type="submit" value="Add review"></p>
+</form>
+
+{% endblock content %}
