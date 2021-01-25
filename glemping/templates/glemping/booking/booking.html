@@ -3,5 +3,9 @@
 {% block title %}Book now{% endblock title %}
 
 {% block content %}
-Book Your holiday with us
+<form method="POST">
+    {{reservation_form.as_p}}
+    {% csrf_token %}
+    <p><input type="submit" value="Book"></p>
+</form>
 {% endblock content %}

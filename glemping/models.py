@@ -89,3 +89,18 @@ class Review(models.Model):
 
     def __str__(self):
         return f'Review by {self.name}'
+
+
+class Reservation(models.Model):
+    name = models.CharField(max_length=20, default='First name')
+    surname = models.CharField(max_length=20, default='Last name')
+    phone_number = models.CharField(max_length=8, default='12345678')
+    email = models.EmailField(default='We need this to send booking data')
+    date = models.DateField(default=timezone.now)
+    available = models.BooleanField(default=True)
+
+    class Meta:
+        unique_together = ("date", "available")
+
+    def __str__(self):
+        return f'{self.name} {self.surname} on {self.date}'
