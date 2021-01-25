@@ -1,0 +1,11 @@
+{% extends 'glemping/base.html' %}
+
+{% block title %} Thank You {% endblock title %}
+
+{% block content %}
+<h1>Thank You, review has been added</h1>
+{% for review in reviews %}
+<h2>{{review.name}}</h2>
+<p>{{review.body}}</p>
+{% endfor %}
+{% endblock content %}

@@ -25,12 +25,14 @@
                     href="{% url 'glemping:post_list' %}">News</a>
                 <a {% ifequal section 'activities' %} class="active" {% endifequal %}
                     href="{% url 'glemping:activity_list' %}">Activities</a>
-                <a href="#reserve">Book Now</a>
+                <a {% ifequal section 'booking' %} class="active" {% endifequal %}
+                    href="{% url 'glemping:booking' %}">Book Now</a>
                 <a {% ifequal section 'gallery' %} class="active" {% endifequal %}
                     href="{% url 'glemping:gallery_list' %}">Gallery</a>
                 <a {% ifequal section 'reviews' %} class="active" {% endifequal %}
                     href="{% url 'glemping:reviews' %}">Reviews</a>
-                <a href="#about us">About us</a>
+                <a {% ifequal section 'about' %} class="active" {% endifequal %} href="{% url 'glemping:about' %}">About
+                    us</a>
             </div>
         </div>
     </header>

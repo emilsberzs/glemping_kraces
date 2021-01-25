@@ -36,10 +36,26 @@ def gallery_list(request):
 
 
 def review_view(request):
+    if request.method == 'POST':
+        review_form = ReviewForm(request.POST)
+        if review_form.is_valid():
+            review_form.save(commit=True)
+            reviews = Review.objects.all()
+            return render(request,
+                          'glemping/reviews/review_added.html',
+                          {'section': 'reviews', 'reviews': reviews})
+    else:
+        review_form = ReviewForm()
+
     reviews = Review.objects.all()
-    review_form = ReviewForm()
     return render(request,
                   'glemping/reviews/review.html',
-                  {'reviews': reviews,
-                   'review_form': review_form,
-                   'section': 'reviews'})
+                  {'review_form': review_form, 'reviews': reviews, 'section': 'reviews'})
+
+
+def about(request):
+    return render(request, 'glemping/about/about_us.html', {'section': 'about'})
+
+
+def booking(request):
+    return render(request, 'glemping/booking/booking.html', {'section': 'booking'})
