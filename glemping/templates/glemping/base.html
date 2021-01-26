@@ -41,7 +41,35 @@
         {% endblock content %}
     </div>
     <footer>
-        <p>Placeholder</p>
+        <div id="footer-1">
+            <h1>Social</h1>
+            <ul>
+                <li>Facebook</li>
+                <li>Instagram</li>
+                <li>Twitter</li>
+            </ul>
+        </div>
+        <div id="footer-2">
+            <h1>Quicklinks</h1>
+            <ul>
+                <li><a href="{% url 'glemping:post_list' %}">News</a></li>
+                <li><a href="{% url 'glemping:activity_list' %}">Activities</a></li>
+                <li><a href="{% url 'glemping:booking' %}">Book Now</a></li>
+                <li><a href="{% url 'glemping:gallery_list' %}">Gallery</li>
+                <li><a href="{% url 'glemping:reviews' %}">Reviews</a></li>
+            </ul>
+        </div>
+        <div id="footer-3">
+            <h1>Contacts</h1>
+            <ul>
+                <li>Call: 27654321</li>
+                <li>email@glempingskraces.lv</li>
+                <li>Kuldigas novads,
+                    Kabiles pagasts,
+                    Krāces </li>
+            </ul>
+
+        </div>
     </footer>
 
 

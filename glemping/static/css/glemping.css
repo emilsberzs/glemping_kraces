@@ -83,12 +83,41 @@ body {
  }
 
  footer {
+   display: flex;
+   flex-wrap:wrap;
    width: 100%;
    padding: 0.5rem;
    background-color: green;
    text-align: center;
    font-size: x-large;
+ }
+ 
+ footer  ul {
+   list-style: none;
+   list-style-type: none;
+   text-align: center;
+   list-style-position: inside;
+   margin: 0;
+   padding: 0;
+ }
 
+ footer div {
+   flex: 0 0 33%;
+   justify-content: center;
+   text-align: center
+ }
+ footer h1 {
+   font-size: x-large;
+   text-align: center;
+ }
+
+ footer li {
+   font-size: large;
+   list-style-type: none;
+   text-align: center;
+   list-style: none;
+   margin: 0;
+   padding: 0;
  }
 
  #content {
