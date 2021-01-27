@@ -5,14 +5,17 @@
 {% block content %}
 <h1>News</h1>
 {% for post in posts %}
-<div>
-    <h2><a href="{{ post.get_absolute_url }}">{{post.title}}</a></h2>
-    <br>
-    <img src="{{post.image.url}}" width="25%">
+<div id="news">
+    <div id="news-list">
+        <h2><a href="{{ post.get_absolute_url }}">{{post.title}}</a></h2>
+        <br>
+        <img src="{{post.image.url}}" width="25%">
 
-    <p class="date">Published {{post.publish}}</p>
-    <p>
-        {{post.body|truncatewords:30|linebreaks}}
-    </p>
-    {% endfor %}
-    {% endblock content %}
+        <p class="date">Published {{post.publish}}</p>
+        <p>
+            {{post.body|truncatewords:30|linebreaks}}
+        </p>
+    </div>
+</div>
+{% endfor %}
+{% endblock content %}

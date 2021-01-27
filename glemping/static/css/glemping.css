@@ -22,7 +22,15 @@ body {
     position: relative;
     height: 450px;
     max-width: 100%;
+    justify-content: center;
   }
+
+.hero-image img {
+  max-height: 300px;
+  text-align: center;
+  margin: 10% 50%;
+  
+}
   
   .hero-text {
     
@@ -30,6 +38,7 @@ body {
     color:honeydew;
     position: absolute;
     font-weight: bold;
+   
     border: 3px solid #f1f1f1;
     position: absolute;
     top: 70%;
@@ -44,6 +53,12 @@ body {
   } 
 .hero-text.h1 {
   font-size: xx-small;
+}
+
+.hero-text img {
+  max-height: 20rem;
+  float: left;
+  ;
 }
 
   .topnav {
@@ -89,7 +104,8 @@ body {
    padding: 0.5rem;
    background-color: green;
    text-align: center;
-   font-size: x-large;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+   font-variant: small-caps;
  }
  
  footer  ul {
@@ -99,6 +115,7 @@ body {
    list-style-position: inside;
    margin: 0;
    padding: 0;
+   justify-content: center;
  }
 
  footer div {
@@ -116,8 +133,33 @@ body {
    list-style-type: none;
    text-align: center;
    list-style: none;
-   margin: 0;
-   padding: 0;
+   padding: 0.3em;
+ }
+
+footer a {
+  text-decoration: none;
+  text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-variant: small-caps;
+  color: black;
+}
+
+#footer-1 {
+  text-align: center;
+
+}
+
+#footer-1 img {
+  max-height: 10rem;
+}
+
+ #social {
+   display: inline-flex;
+ }
+
+ #social img {
+   height: 2em;
+   padding: 0 1em 0 1em;
  }
 
  #content {
@@ -152,7 +194,17 @@ body {
   margin: 5px;
   border: 2px solid black;
   max-width: 33.3%;
-  
 }
 
+#news-list a {
+  text-decoration: none;
+  font-size: x-large;
+  color: black;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-variant: small-caps;
+}
 
+#weather img {
+ margin-left: 1%;
+ margin-top: 1%;
+}
