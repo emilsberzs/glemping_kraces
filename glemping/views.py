@@ -5,7 +5,17 @@ from django.db import IntegrityError
 
 
 def homepage_view(request):
-    return render(request, 'glemping/home.html', {'section': 'home'})
+    posts = Post.published.all()
+    activities = Activity.published.all()
+    reviews = Review.objects.all()[:3]
+    pictures = Picture.objects.all()[:4]
+    return render(request,
+                  'glemping/home.html',
+                  {'section': 'home',
+                   'posts': posts,
+                   'activities': activities,
+                   'reviews': reviews,
+                   'pictures': pictures})
 
 
 def post_list(request):
