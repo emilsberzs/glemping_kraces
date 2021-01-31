@@ -3,36 +3,9 @@
 {% block title %}Kraces{% endblock title %}
 {% block content %}
 <div id="landing">
-    <div id='latest'>
-        <h1>Latest</h1>
-        <h2> {{posts.first.title}} </h2>
-        <p>{{posts.first.body|truncatewords:30}}</p>
-        <img src="{{posts.first.image.url}}" width="200px">
-    </div>
-    <div id="pictures">
-        <h1>Pictures</h1>
-        {% for picture in pictures %}
-        <img src="{{picture.image.url}}" width="150px">
-        {% endfor %}
-    </div>
-    <div id="review-preview">
-        <div id="testimonials">
-            <h1>What people say</h1>
-            {% for review in reviews %}
-            <h2>{{review.name}}</h2>
-            <p>{{review.body}}</p>
-            <p>{{review.created}}</p>
-            {% endfor %}
-        </div>
-    </div>
-    <div id="home-activities">
-        <h1>What to do</h1>
-        {% for activity in activities %}
-        <div id="home-activity">
-            <h2>{{activity.title}}</h2>
-            <img src="{{activity.image.url}}" width="300px" height="225px">
-        </div>
-        {% endfor %}
-    </div>
+
+
+    <img src="/static/landing-bg.jpg" width="100%">
+</div>
 </div>
 {% endblock content %}

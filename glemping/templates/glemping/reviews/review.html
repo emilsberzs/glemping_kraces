@@ -3,10 +3,14 @@
 {% block title %}Reviews{% endblock title %}
 
 {% block content %}
-{% for review in reviews %}
-<h2>{{review.name}}</h2>
-<p>{{review.body}}</p>
-{% endfor %}
+<div class="reviews">
+    {% for review in reviews %}
+    <div class="review">
+        <h2>{{review.name}}</h2>
+        <p>{{review.body|linebreaks}}</p>
+    </div>
+    {% endfor %}
+</div>
 <h1>Add a review</h1>
 <form method="POST">
     {{review_form.as_p}}

@@ -1,117 +1,125 @@
 
+
+
 html {
   height: 100%;
+  
 }
 
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  height: 100%;
+
 }
 
 .hero-image {
-    background-image: url(/static/hero-image.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    height: 450px;
-  }
-
+  background-image: url(/static/hero-image.jpg);
+  background-size: cover;
+  background-size: 100% 100%;
+  background-origin: content-box;
+  background-position: center;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 450px;
   
-  .hero-text {
-    
-    font-size: x-large;
-    color:honeydew;
-    position: absolute;
-    font-weight: bold;
-    border: 3px solid #f1f1f1;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 60%;
-    padding: 20px;
-    text-align: center;
-    background-color: rgba(0,0,0, 0.5);
-
-  } 
-
-  .topnav {
-    background-color: green;
-    overflow: auto;
-    width: 100%;
-  }
+}
 
 
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .navbar {
-      width:100%;
-      overflow: auto;
-  }
-
-  .navbar a {
-    float: left;
-    padding: 12px 1px 12px 1px;
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-    width: 14%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
-    text-align: center; /* If you want the text to be centered */
-  }
+.hero-text {
   
- .active {
-     background-color: black;
- }
+  font-size: x-large;
+  position: absolute;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 60%;
+  padding: 20px;
+  text-align: center;
+  background-color: #CEEBAD52;
+  
+} 
 
- #content {
-     align-items: center;
-     text-align: center;
- }
+.topnav {
+  background-color: #85CB33;
+  overflow: auto;
+  width: 100%;
+}
 
- footer {
-   display: flex;
-   flex-wrap:wrap;
-   width: 100%;
-   padding: 0.5rem;
-   background-color: green;
-   text-align: center;
-   font-family:Georgia, 'Times New Roman', Times, serif;
-   font-variant: small-caps;
- }
- 
- footer  ul {
-   list-style: none;
-   list-style-type: none;
-   text-align: center;
-   list-style-position: inside;
-   margin: 0;
-   padding: 0;
-   justify-content: center;
- }
 
- footer div {
-   flex: 0 0 33%;
-   justify-content: center;
-   text-align: center
- }
- footer h1 {
-   font-size: x-large;
-   text-align: center;
- }
+.topnav a:hover {
+  background-color: #254D32;
+  color: black;
+}
 
- footer li {
-   font-size: large;
-   list-style-type: none;
-   text-align: center;
-   list-style: none;
-   padding: 0.3em;
- }
+.navbar {
+  width:100%;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px 1px 12px 1px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 14%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+  text-align: center; /* If you want the text to be centered */
+}
+
+.active {
+  background-color: #5BC0EB;
+}
+
+
+#content {
+  align-items: center;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  flex-wrap:wrap;
+  width: 100%;
+  padding: 0.5rem;
+  background-color:#85CB33;
+  text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-variant: small-caps;
+}
+
+footer  ul {
+  list-style: none;
+  list-style-type: none;
+  text-align: center;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+footer div {
+  flex: 0 0 33%;
+  justify-content: center;
+  text-align: center
+}
+footer h1 {
+  font-size: x-large;
+  text-align: center;
+}
+
+footer li {
+  font-size: large;
+  list-style-type: none;
+  text-align: center;
+  list-style: none;
+  padding: 0.3em;
+}
 
 footer a {
   text-decoration: none;
@@ -123,31 +131,30 @@ footer a {
 
 #footer-1 {
   text-align: center;
-
+  
 }
 
 #footer-1 img {
   max-height: 10rem;
 }
 
- #social {
-   display: inline-flex;
- }
+#social {
+  display: inline-flex;
+}
 
- #social img {
-   height: 2em;
-   padding: 0 1em 0 1em;
- }
+#social img {
+  height: 2em;
+  padding: 0 1em 0 1em;
+}
 
- #content {
-   flex: 1 0 auto;
-   padding: 0.5rem;
- }
+#content {
+  flex: 1 0 auto;
+}
 
- .activities {
-   display: flex;
-   flex-wrap: wrap;
- }
+.activities {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .activity {
   flex: 0 0 33%;
@@ -162,7 +169,7 @@ footer a {
   display: flex;
   flex-wrap: wrap;
   background-image: url(/static/backround.png);
-
+  
 }
 
 .picture {
@@ -173,7 +180,7 @@ footer a {
   border: 2px solid black;
   max-width: 33.3%;
   gap: dense;
-
+  
 }
 
 #news-list a {
@@ -185,66 +192,18 @@ footer a {
 }
 
 #weather img {
- margin-left: 1%;
- margin-top: 1%;
+  margin-left: 1%;
+  margin-top: 1%;
 }
 
 
-#landing {
-  display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr);
-  grid-template-rows: repeat(3, 400px);
-  
-}
 
-#landing div {
-  margin: 20px;
-  overflow:hidden;
-  background-color: rgb(225, 254, 255);
-  
-}
-
-#landing div h1 {
-  font-size: x-large;
-}
-
-#landing div h2 {
-  font-size: large;
-}
-
-#latest {
-  grid-column: col-start / span 3;
-  grid-row: 1;
+iframe {
   border: 3px black solid;
-}
-
-#pictures {
-  grid-column: col-start 4 / span 6;
-  grid-row: 1;
-  border:3px black solid;
-  margin: 10px;
-}
-
-#review-preview {
-  grid-column: col-start 10 / span 3;
-  grid-row: 1;
-  border: 3px black solid;
-  overflow: hidden;
-}
-
-#home-activities {
-  grid-row: 2;
-  grid-column: col-start  / span 12;
-  display: inline;
-  border: black 3px solid;
-  vertical-align: top;
-  height: 500px;
+  border-radius: 30px;
+  overflow: unset;
+  margin-top: 20px;
   
-}
-
-#home-activity  {
-  display: inline-grid;
-  padding: 50px;
 }
 
 #booking-form {
@@ -253,4 +212,51 @@ footer a {
   margin-left: 25%;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+@media (max-width:500px){
+ .hero-image {
+   background-size:contain;
+   background-repeat: no-repeat;
+   background-position: top;
+   height: 80px;
+   width: 100%;
+   margin: unset;
+ }
+
+ .hero-text {
+   font-size: small;
+   background-color: unset;
+   border: unset;
+ }
+
+ .hero-text h2 {
+   display:hidden;
+ }
+}
+
+.about-us {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+}
+
+.map {
+  grid-column: col-start 1/ span 6;
+}
+
+.about {
+  grid-column: col-start 7 / span 6;
+}
+
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+}
+
+.review {
+  color: black;
+  margin-top:10px;
+  border: 2px solid black;
+  border-radius: 30px;
+  grid-column: col-start 5 / span 4;
 }
