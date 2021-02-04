@@ -10,34 +10,28 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  margin:1px;
 
 }
 
 .hero-image {
   background-image: url(/static/hero-image.jpg);
+  background-position:center;
   background-size: cover;
-  background-origin: content-box;
-  background-position: center;
   position: relative;
   display: flex;
-  height: 30vh;
+  height: 40vh;
   width:100vw;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   
 }
 
-
-.hero-text {
-  font-size: large;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
-  width: 60%;
-  background-color: #CEEBAD52;
-  height:20vh;
-  position: absolute;
-  text-align: center;
-  align-content: center;
+.hero-text img {
+  height:18vw;
+  background-color: rgba(20, 20, 20, 0.445);
+  border-radius: 18vw;
+  border: 2px solid black
 }
 
 .hero-hero-text {
@@ -76,7 +70,8 @@ body {
 }
 
 
-#content {
+content {
+  align-content: center;
   align-items: center;
   text-align: center;
 }
@@ -134,7 +129,7 @@ footer a {
 }
 
 #footer-1 img {
-  max-height: 10rem;
+  max-height: 15rem;
 }
 
 #social {
@@ -146,22 +141,23 @@ footer a {
   padding: 0 1em 0 1em;
 }
 
-#content {
+content {
   flex: 1 0 auto;
 }
 
 .activities {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 48vw 48vw;
+  grid-template-rows: 20vw 20;
+  grid-gap: 2vw;
 }
 
 .activity {
-  flex: 0 0 33%;
-  padding: 0;
-}
-
-.activity::before{
-  left: -20px;
+  border: 2px solid black;
+  border-radius: 2vw;
+  margin:2vw;
+  background-color:rgba(0, 0, 0, 0.01);
+  padding: 1rem;
 }
 
 .gallery {
@@ -182,12 +178,31 @@ footer a {
   
 }
 
+#news {
+  display: inline-block;
+  max-width: 1000px;
+ 
+}
+
+#news-list {
+  border: 2px solid black;
+  border-radius: 2vw;
+  margin:2vw;
+  background-color:rgba(0, 0, 0, 0.01);
+  padding: 1rem;
+}
+
 #news-list a {
   text-decoration: none;
-  font-size: x-large;
+  font-size: medium;
   color: black;
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-variant: small-caps;
+}
+
+
+.date {
+  font-size: small;
 }
 
 #weather img {
@@ -199,40 +214,21 @@ footer a {
 
 iframe {
   border: 3px black solid;
-  border-radius: 30px;
   overflow: unset;
   margin-top: 20px;
+  width: 50vw;
   
 }
 
 #booking-form {
-  border: hotpink solid 3px;
-  width: 50%;
-  margin-left: 25%;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  border: 2px solid black;
+  border-radius: 2vw;
+  margin:2vw;
+  background-color:rgba(0, 0, 0, 0.01);
+  padding: 1rem;
+  justify-content: left;
 }
 
-@media (max-width:500px){
- .hero-image {
-   background-size:contain;
-   background-repeat: no-repeat;
-   background-position: top;
-   height: 80px;
-   width: 100%;
-   margin: unset;
- }
-
- .hero-text {
-   font-size: small;
-   background-color: unset;
-   border: unset;
- }
-
- .hero-text h2 {
-   display:hidden;
- }
-}
 
 .about-us {
   display: grid;
@@ -259,3 +255,73 @@ iframe {
   border-radius: 30px;
   grid-column: col-start 5 / span 4;
 }
+
+  @media (max-width:500px){
+
+  
+  content {
+    max-height:fit-content;
+  }
+
+   .hero-image {
+     background-size:cover;
+     background-repeat: no-repeat;
+     background-position: top;
+     height: 80px;
+     width: 100vw;
+     margin: unset;
+     justify-content: left;
+   }
+
+   
+   .about-us {
+     display: grid;
+     grid-template-columns: 1;
+     grid-template-rows: 2;
+     align-self: left;
+   }
+
+   .map {
+     display: grid;
+     grid-row: 1;
+     width: 95vw;
+   }
+
+   .map iframe {
+     width: 95vw;
+     align-self: left;
+   }
+
+   .about {
+     display: grid;
+     grid-row: 2;
+     grid-column: 1;
+     height: 30vh;
+     width: 100vw;
+   }
+  
+   #footer-1 {
+     display: none;
+   }
+
+   footer {
+     justify-content: center;
+     padding: unset;
+   }
+
+   footer h1 {
+     font-size: medium;
+   }
+
+   footer li {
+     font-size: small;
+   }
+  .activities {
+    display: unset;
+  }
+
+  .activity {
+    padding: 2rem;
+  }
+  }
+
