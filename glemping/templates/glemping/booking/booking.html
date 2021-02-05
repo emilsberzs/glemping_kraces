@@ -7,12 +7,8 @@
     <form method="POST">
         <div id="booking-form">
             {{reservation_form.as_p}}
-            <p> <label for="id_date">Date:</label>
-                <input type="text" name="date" value="2021-01-29" required="" id="id_date"><input type="hidden"
-                    name="initial-date" value="2021-01-29 20:20:28+00:00" id="initial-id_date">
-            </p>
             {% csrf_token %}
-            <p><input type="submit" value="Book"></p>
+            <p id="submit-button"><input type="submit" value="Book"></p>
         </div>
     </form>
 </div>

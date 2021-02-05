@@ -92,10 +92,10 @@ class Review(models.Model):
 
 
 class Reservation(models.Model):
-    name = models.CharField(max_length=20, default='First name')
-    surname = models.CharField(max_length=20, default='Last name')
-    phone_number = models.CharField(max_length=8, default='12345678')
-    email = models.EmailField(default='We need this to send booking data')
+    name = models.CharField(max_length=20, default='')
+    surname = models.CharField(max_length=20, default='')
+    phone_number = models.CharField(max_length=8, default='')
+    email = models.EmailField(default='')
     date = models.DateField(default=timezone.now)
     available = models.BooleanField(default=True)
 
