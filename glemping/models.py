@@ -79,10 +79,12 @@ class Picture(models.Model):
 
 
 class Review(models.Model):
+
     name = models.CharField(max_length=50)
     body = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=True)
+    rating = models.CharField(max_length=5, default='5')
 
     class Meta:
         ordering = ('created',)

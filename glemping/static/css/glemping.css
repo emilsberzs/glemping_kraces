@@ -254,6 +254,7 @@ iframe {
   padding: 1rem;
   text-align: right;
   position: relative;
+  
 }
 
 #submit-button {
@@ -282,7 +283,9 @@ iframe {
   grid-column: col-start 8 / span 6;
 }
 
-.reviews {
+.review {
+  background-color: rgba(128, 128, 128, 0.274);
+  margin: 5px auto 0 auto;
   
 }
 
@@ -307,6 +310,79 @@ input[type=submit] {
 }
 
 
+
+#review-rating ul {
+  list-style-type: none;
+  display: inline-flex;
+}
+
+#review-rating ul li {
+  color: gold;
+  font-size: large;
+}
+
+#review-rating p {
+  color: gold;
+  font-size: large;
+}
+
+.rating label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  cursor: pointer;
+}
+
+.rating label:last-child {
+  position: static;
+}
+
+.rating label:nth-child(1) {
+  z-index: 5;
+}
+
+.rating label:nth-child(2) {
+  z-index: 4;
+}
+
+.rating label:nth-child(3) {
+  z-index: 3;
+}
+
+.rating label:nth-child(4) {
+  z-index: 2;
+}
+
+.rating label:nth-child(5) {
+  z-index: 1;
+}
+
+.rating label input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.rating label .icon {
+  float: left;
+  color: transparent;
+}
+
+.rating label:last-child .icon {
+  color: #000;
+}
+
+.rating:not(:hover) label input:checked ~ .icon,
+.rating:hover label:hover input ~ .icon {
+  color: gold;
+}
+
+.rating label input:focus:not(:checked) ~ .icon:last-child {
+  color: #000;
+  text-shadow: 0 0 5px gold;
+}
   @media (max-width:500px){
 
   

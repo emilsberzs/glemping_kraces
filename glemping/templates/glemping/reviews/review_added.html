@@ -5,7 +5,12 @@
 {% block content %}
 <h1>Thank You, review has been added</h1>
 {% for review in reviews %}
-<h2>{{review.name}}</h2>
-<p>{{review.body}}</p>
+<div class="review">
+    <h2>{{review.name}}</h2>
+    <div id="review-rating">
+        <p>{{review.rating}}</p>
+    </div>
+    <p>{{review.body}}</p>
+</div>
 {% endfor %}
 {% endblock content %}

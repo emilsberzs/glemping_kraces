@@ -8,13 +8,27 @@
     {% for review in reviews %}
     <div class="review">
         <h2>{{review.name}}</h2>
+        <div id="review-rating">
+            <p>{{review.rating}}</p>
+        </div>
         <p>{{review.body|linebreaks}}</p>
     </div>
     {% endfor %}
 </div>
 <h1>Add a review</h1>
+
 <form method="POST">
-    {{review_form.as_p}}
+    <div id="review_form">
+        <div id="review-rating">
+            {{review_form.rating}}
+        </div>
+        <div id="review-name">
+            {{review_form.name}}
+        </div>
+        <div id="review-body">
+            {{review_form.body}}
+        </div>
+    </div>
     {% csrf_token %}
     <p><input type="submit" value="Add review"></p>
 </form>
