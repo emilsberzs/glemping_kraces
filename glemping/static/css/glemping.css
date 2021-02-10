@@ -124,7 +124,7 @@ footer  ul {
 }
 
 footer div {
-  flex: 0 0 33%;
+  flex: 0 0 32.5%;
   justify-content: center;
   text-align: center
 }
@@ -284,7 +284,6 @@ iframe {
 }
 
 .review {
-  background-color: rgba(128, 128, 128, 0.274);
   margin: 5px auto 0 auto;
   
 }
@@ -293,7 +292,7 @@ iframe {
 .review {
   color: black;
   margin:5px auto 0px auto;
-  border: 0.05px solid black;
+  border: 0.01px  black;
   border-radius: 30px;;
   min-width: 80vw;
   max-width: 900px;
@@ -309,21 +308,26 @@ input[type=submit] {
   
 }
 
-
+#review-rating ul li {
+  color: gold;
+  font-size: xx-large;
+}
 
 #review-rating ul {
   list-style-type: none;
   display: inline-flex;
 }
 
-#review-rating ul li {
-  color: gold;
-  font-size: large;
-}
 
 #review-rating p {
   color: gold;
-  font-size: large;
+  font-size: xx-large;
+  margin: 0 auto 0 auto;
+
+}
+
+.review h2 {
+  margin: 0 auto 0 auto;
 }
 
 .rating label {
@@ -469,6 +473,9 @@ input[type=submit] {
     font-size: large;
   }
   
+  #review-rating ul {
+    display: inline-block;
+  }
 
   }
 
